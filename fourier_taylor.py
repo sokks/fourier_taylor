@@ -5,11 +5,12 @@ from scipy.misc import derivative
 from scipy.special import factorial
 
 l = 3.0
-taylor_center = 0.0
+taylor_center = 1.0
 
 def function(x):
     #return np.sin(x) / np.exp(x)
-    return np.exp(np.sin(x))
+    return np.exp(x) * (2.8 - x)
+    #return np.exp(np.sin(x))
     #return np.exp(x)
     #return np.cos(x)
 
@@ -39,7 +40,7 @@ def fourier(n):
 def taylor(n):
     def pfunc(x):
         a0 = function(taylor_center)
-        ak = list((derivative(function, 1.0, dx=0.1, n=k, order=2*k+1)) for k in range(1, n))
+        ak = [(derivative(function, taylor_center, dx=0.1, n=k, order=2*k+1)) for k in range(1, n)]
         asum = 0.0
         for k in range(1, n):
             asum += ak[k - 1] / factorial(k) * (x - taylor_center)**k
@@ -55,18 +56,20 @@ plt.figure()
 plt.ion()
 plt.title("Fourier & Taylor")
 plt.grid(True)
-plt.ylim(-3, 3)
 
 #
 
 n = 0
 a0 = (1 / l) * integrate.quad(function, -l, l)[0] / 2
 y_steps_fourier = np.linspace(a0, a0, num=len(x_steps_fourier))
+t0 = function(taylor_center)
+y_steps_taylor = np.linspace(t0, t0, num=len(x_steps_taylor))
 plt.clf()
 plt.rc('lines', linewidth=4)
 plt.plot(x_steps_test, y_steps_test, color='r')
 plt.rc('lines', linewidth=2)
 plt.plot(x_steps_fourier, y_steps_fourier, color='b')
+plt.plot(x_steps_taylor, y_steps_taylor, color='g')
 plt.pause(0.2)
 
 n += 1
@@ -76,11 +79,13 @@ a1 = (1 / l) * integrate.quad(funccos1, -l, l)[0]
 b1 = (1 / l) * integrate.quad(funcsin1, -l, l)[0]
 f1 = lambda x: a0 + a1 * np.cos(np.pi * x / l) + b1 * np.sin(np.pi * x / l)
 y_steps_fourier = f1(x_steps_fourier)
+t1 = lambda x: t0 + derivative(function, taylor_center, dx=0.1) * (x - taylor_center)
 plt.clf()
 plt.rc('lines', linewidth=4)
 plt.plot(x_steps_test, y_steps_test, color='r')
 plt.rc('lines', linewidth=2)
 plt.plot(x_steps_fourier, y_steps_fourier, color='b')
+plt.plot(x_steps_taylor, y_steps_taylor, color='g')
 plt.pause(0.2)
 
 

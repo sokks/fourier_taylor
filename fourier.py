@@ -45,7 +45,7 @@ def T(n):
 def P(n):
     def pfunc(x):
         a0 = function(taylor_center)
-        ak = list((derivative(function, 1.0, dx=0.1, n=k, order=2*k+1)) for k in range(1, n))
+        ak = list((derivative(function, 1.0, dx=0.01, n=k, order=2*k+1)) for k in range(1, n))
         asum = 0.0
         for k in range(1, n):
             asum += ak[k - 1] / factorial(k) * (x - taylor_center)**k
