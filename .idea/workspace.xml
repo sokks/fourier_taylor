@@ -20,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fourier.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fourier.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fourier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            <state relative-caret-position="405">
+              <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -32,13 +32,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fourier_taylor.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fourier_taylor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fourier_taylor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="48" column="2" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
+            <state relative-caret-position="221">
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graphs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../setki/heat_conduction_1d_oop/heat_conduction_1d_oop/graphs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-204">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,8 +86,8 @@
         <option value="$PROJECT_DIR$/sourse/fuorier.py" />
         <option value="$PROJECT_DIR$/sourse/fourier.py" />
         <option value="$PROJECT_DIR$/../Новая папка (2)/Иван Грачев 4, 5 update/New Folder With Items/approximation.py" />
-        <option value="$PROJECT_DIR$/fourier_taylor.py" />
         <option value="$PROJECT_DIR$/fourier.py" />
+        <option value="$PROJECT_DIR$/fourier_taylor.py" />
       </list>
     </option>
   </component>
@@ -142,7 +154,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Python.fourier (1)">
+  <component name="RunManager" selected="Python.fourier_taylor">
     <configuration default="false" name="fourier" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -371,8 +383,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.fourier (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.fourier_taylor" />
+        <item index="0" class="java.lang.String" itemvalue="Python.fourier_taylor" />
+        <item index="1" class="java.lang.String" itemvalue="Python.fourier (1)" />
         <item index="2" class="java.lang.String" itemvalue="Python.approximation" />
         <item index="3" class="java.lang.String" itemvalue="Python.fourier" />
         <item index="4" class="java.lang.String" itemvalue="Python.color_cycle_demo" />
@@ -498,6 +510,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sourse/fourier.py" />
+    <entry file="file://$PROJECT_DIR$/fourier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../setki/heat_conduction_1d_oop/heat_conduction_1d_oop/graphs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../Новая папка (2)/Иван Грачев 4, 5 update/New Folder With Items/approximation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -510,18 +542,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fourier_taylor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="48" column="2" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fourier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        <state relative-caret-position="221">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

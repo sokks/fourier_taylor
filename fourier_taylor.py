@@ -36,6 +36,16 @@ def fourier(n):
     return tfunc
 
 
+def taylor(n):
+    def pfunc(x):
+        a0 = function(taylor_center)
+        ak = list((derivative(function, 1.0, dx=0.1, n=k, order=2*k+1)) for k in range(1, n))
+        asum = 0.0
+        for k in range(1, n):
+            asum += ak[k - 1] / factorial(k) * (x - taylor_center)**k
+        return a0 + asum
+    return pfunc
+
 x_steps_test = np.linspace(-l, l, num=1000, endpoint=True)
 x_steps_fourier = np.linspace(-l, l, num=100, endpoint=True)
 x_steps_taylor = np.linspace(-l, l, num=100, endpoint=True)
@@ -45,8 +55,9 @@ plt.figure()
 plt.ion()
 plt.title("Fourier & Taylor")
 plt.grid(True)
+plt.ylim(-3, 3)
 
-t0
+#
 
 n = 0
 a0 = (1 / l) * integrate.quad(function, -l, l)[0] / 2
@@ -75,10 +86,12 @@ plt.pause(0.2)
 
 for n in range(2, 25):
     y_steps_fourier = fourier(n)(x_steps_fourier)
+    y_steps_taylor = taylor(n)(x_steps_taylor)
     plt.clf()
     plt.rc('lines', linewidth=4)
     plt.plot(x_steps_test, y_steps_test, color='r')
     plt.rc('lines', linewidth=2)
     plt.plot(x_steps_fourier, y_steps_fourier, color='b')
+    plt.plot(x_steps_taylor, y_steps_taylor, color='g')
     plt.pause(0.2)
 plt.show(block=True)
